@@ -1,0 +1,94 @@
+/* =========================================================
+   theme.css — 這週先借穿的衣服 👕
+   W1 你只要改 HTML，不用看懂這個檔案。
+   到了 W3，你會學會自己做一件這樣的衣服！
+
+   換主題的方法：到 index.html 把 <body class="theme-neon">
+   改成 theme-neon / theme-notebook / theme-minimal 其中一個
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@400;700;900&family=LXGW+WenKai+TC&display=swap");
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 44px 40px;
+  line-height: 1.85;
+  font-size: 17px;
+  text-align: center;
+}
+img { width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto 18px; }
+h1 { font-size: 2.4rem; margin: 0 0 6px; line-height: 1.25; }
+h2 { font-size: 1.25rem; margin: 30px 0 8px; }
+p { margin: 8px 0; }
+hr { border: 0; height: 2px; margin: 30px auto; width: 60%; }
+a { font-weight: 700; text-underline-offset: 4px; }
+@media (max-width: 680px) {
+  body { margin: 0; min-height: 100vh; padding: 36px 20px; border-radius: 0 !important; }
+}
+
+/* ---------- 主題 1：霓虹夜市 ---------- */
+html:has(> body.theme-neon) {
+  background: radial-gradient(circle at 20% 10%, #3a1d6e 0%, #120d24 55%) fixed;
+}
+body.theme-neon {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #e9e4ff;
+  background: rgba(20, 14, 40, .75);
+  border: 2px solid #ff4fd8;
+  border-radius: 24px;
+  box-shadow: 0 0 24px rgba(255, 79, 216, .55), inset 0 0 24px rgba(68, 230, 255, .15);
+}
+.theme-neon h1 { color: #fff; font-weight: 900; text-shadow: 0 0 8px #ff4fd8, 0 0 22px #ff4fd8; }
+.theme-neon h2 { color: #44e6ff; text-shadow: 0 0 10px rgba(68, 230, 255, .8); }
+.theme-neon strong { color: #ffe66d; }
+.theme-neon em { color: #ff9ff0; }
+.theme-neon hr { background: linear-gradient(90deg, transparent, #44e6ff, transparent); }
+.theme-neon a { color: #44e6ff; }
+.theme-neon img { box-shadow: 0 0 0 4px #120d24, 0 0 0 7px #44e6ff, 0 0 30px #44e6ff; }
+
+/* ---------- 主題 2：手帳筆記 ---------- */
+html:has(> body.theme-notebook) {
+  background: #e8dcc8;
+}
+body.theme-notebook {
+  font-family: "LXGW WenKai TC", "Noto Sans TC", sans-serif;
+  color: #3b3027;
+  background-color: #fffaf0;
+  background-image: linear-gradient(#e7eef9 1px, transparent 1px);
+  background-size: 100% 32px;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 #d5c4a8, 0 20px 40px -18px rgba(70, 50, 20, .5);
+  border-left: 10px solid #f2a7a0;
+}
+.theme-notebook h1 { color: #c2412d; font-weight: 400; transform: rotate(-1.5deg); }
+.theme-notebook h2 {
+  display: inline-block; padding: 0 14px; font-weight: 400;
+  background: linear-gradient(transparent 55%, #ffe27a 55%);
+}
+.theme-notebook strong { color: #c2412d; }
+.theme-notebook hr { background: repeating-linear-gradient(90deg, #c9b79a 0 10px, transparent 10px 18px); }
+.theme-notebook a { color: #2f6db3; }
+.theme-notebook img { border: 6px solid #fff; box-shadow: 0 6px 16px rgba(70, 50, 20, .25); transform: rotate(3deg); border-radius: 12px; }
+
+/* ---------- 主題 3：極簡雜誌 ---------- */
+html:has(> body.theme-minimal) {
+  background: #f3f3f1;
+}
+body.theme-minimal {
+  font-family: "Noto Serif TC", serif;
+  color: #1d1d1f;
+  background: #fff;
+  text-align: left;
+  border-top: 8px solid #1d1d1f;
+}
+.theme-minimal img { margin: 0 0 22px; border-radius: 0; filter: grayscale(1) contrast(1.1); }
+.theme-minimal h1 { font-size: 3rem; font-weight: 900; letter-spacing: -.02em; }
+.theme-minimal h2 {
+  font-family: "Noto Sans TC", sans-serif; font-size: .8rem; letter-spacing: .3em; color: #8a8a8a;
+  border-bottom: 1px solid #ddd; padding-bottom: 6px;
+}
+.theme-minimal hr { background: #1d1d1f; width: 40px; margin-left: 0; }
+.theme-minimal a { color: #1d1d1f; }
+.theme-minimal em { background: #ffef9a; font-style: normal; padding: 0 4px; }
